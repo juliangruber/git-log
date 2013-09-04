@@ -1,6 +1,6 @@
 {
   "name": "git-log",
-  "description": "Git log using jsgit",
+  "description": "Git log stream using jsgit",
   "version": "0.0.0",
   "repository": {
     "type": "git",
@@ -9,14 +9,16 @@
   "homepage": "https://github.com/juliangruber/git-log",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test.js"
   },
   "dependencies": {
     "git-walk-refs": "0.0.1",
-    "git-fs-repo": "0.0.4"
+    "git-fs-repo": "git://github.com/juliangruber/git-fs-repo.git#patch-1",
+    "through": "~2.3.4",
+    "git-parse-human": "0.0.1"
   },
   "devDependencies": {
-    "tape": "*"
+    "tape": "~1.1.0"
   },
   "keywords": [
     "git",
