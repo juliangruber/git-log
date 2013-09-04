@@ -1,0 +1,33 @@
+{
+  "name": "git-log",
+  "description": "Git log using jsgit",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juliangruber/git-log.git"
+  },
+  "homepage": "https://github.com/juliangruber/git-log",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "dependencies": {
+    "git-walk-refs": "0.0.1",
+    "git-fs-repo": "0.0.4"
+  },
+  "devDependencies": {
+    "tape": "*"
+  },
+  "keywords": [
+    "git",
+    "log",
+    "jsgit",
+    "history"
+  ],
+  "author": {
+    "name": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com"
+  },
+  "license": "MIT"
+}
