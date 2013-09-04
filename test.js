@@ -3,8 +3,12 @@ var test = require('tape');
 
 test('log', function(t) {
   t.plan(1);
-  log(__dirname + '/.git').once('data', function(obj) {
-    t.deepEqual(obj, {
+  var rev;
+
+  log(__dirname + '/.git')
+  .on('data', function(r) { rev = r })
+  .on('end', function() {
+    t.deepEqual(rev, {
       message: 'initial commit\n',
       hash: '9407e380dfff07d86fa1b1c36ec704b2bdd96e9c',
       tree: [ 'c08f6e872c2a0b58afcb0f0ee68e7807875905d4' ],
