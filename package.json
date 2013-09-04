@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "git-walk-refs": "0.0.1",
-    "git-fs-repo": "git://github.com/juliangruber/git-fs-repo.git#patch-1",
+    "git-fs-repo": "0.0.5",
     "through": "~2.3.4",
     "git-parse-human": "0.0.1"
   },
