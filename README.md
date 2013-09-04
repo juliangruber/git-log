@@ -3,6 +3,8 @@
 
 Git log stream using jsgit.
 
+[![build status](https://secure.travis-ci.org/juliangruber/git-log.png)](http://travis-ci.org/juliangruber/git-log)
+
 ## Example
 
 ```js
