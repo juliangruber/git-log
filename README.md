@@ -27,7 +27,8 @@ $ node example.js
 
 ### var stream = log(path)
 
-Create a readable stream that emits commits for the git repository in `path`.
+Create a readable stream that emits commits for the git repository in `path`,
+starting from the newest one.
 
 ### stream.on('data', fn)
 
