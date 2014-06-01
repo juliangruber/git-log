@@ -12,10 +12,10 @@
     "test": "make test"
   },
   "dependencies": {
-    "git-walk-refs": "0.0.1",
     "git-fs-repo": "0.0.5",
-    "through": "~2.3.4",
-    "git-parse-human": "0.0.1"
+    "git-parse-human": "0.0.1",
+    "git-walk-refs": "0.0.2",
+    "through": "~2.3.4"
   },
   "devDependencies": {
     "tape": "~1.1.0"
