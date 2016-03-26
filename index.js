@@ -5,7 +5,7 @@
 
 var load = require('git-fs-repo');
 var walk = require('git-walk-refs');
-var human = require('git-parse-human');
+var parseHuman = require('git-parse-human');
 var through = require('through');
 
 /**
@@ -23,7 +23,7 @@ module.exports = log;
 
 function log(path) {
   var tr = through(function(rev) {
-    this.queue({
+    var log = {
       message: rev._message,
       hash: rev.hash,
       tree: rev._attrs.tree,
@@ -31,15 +31,18 @@ function log(path) {
       author: {
         name: rev.human.name,
         email: rev.human.email
-      },
-      committer: rev._attrs.committer.map(function(committer) {
-        var h = human(committer);
-        return {
-          name: h.name,
-          email: h.email
-        };
-      })
-    });
+      }
+    };
+
+    if (rev._attrs.committer) {
+      log.committer = rev._attrs.committer.map(toHuman);
+    }
+
+    if (rev._attrs.tagger) {
+      log.tagger = rev._attrs.tagger.map(toHuman);
+    }
+
+    this.queue(log);
   });
 
   load(path, function(err, repo) {
@@ -58,3 +61,10 @@ function get(prop) {
   }
 }
 
+function toHuman(str) {
+  var h = parseHuman(str);
+  return {
+    name: h.name,
+    email: h.email
+  };
+}
