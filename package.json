@@ -12,13 +12,13 @@
     "test": "make test"
   },
   "dependencies": {
-    "git-fs-repo": "0.0.5",
-    "git-parse-human": "0.0.1",
-    "git-walk-refs": "0.0.2",
+    "git-fs-repo": "2.0.0",
+    "git-parse-human": "1.0.0",
+    "git-walk-refs": "1.0.0",
     "through": "~2.3.4"
   },
   "devDependencies": {
-    "tape": "~1.1.0"
+    "tape": "~4.6.2"
   },
   "keywords": [
     "git",
