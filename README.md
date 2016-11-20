@@ -31,7 +31,7 @@ starting from the newest one.
 ### stream.on('data', fn)
 
 For every commit, call `fn` with an object with keys `message`, `hash`, `tree`,
-`date`, `author`, `committer`.
+`date`, `author`, `committer`/`tagger`.
 
 ## Installation
 
